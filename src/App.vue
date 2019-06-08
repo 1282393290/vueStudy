@@ -11,6 +11,12 @@
         <h1>{{foot}}</h1>
       </template>
     </Footer>
+    <div>
+      <h1>detail</h1>
+      <ul>
+        <li v-for="(item, index) in list" :key="index"><router-link :to="`/detail/${index}`">{{item.name}}</router-link></li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -20,7 +26,12 @@ import Footer from '@/components/footer'
 export default {
   data () {
     return {
-      msg: ''
+      msg: '',
+      list: [
+        {name: "沈萌"},
+        {name: "波多野结衣"},
+        {name: "吉泽明步"}
+      ]
     }
   },
   components: {
