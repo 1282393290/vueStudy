@@ -1,12 +1,22 @@
 <template>
   <div id="app">
-    <!-- <router-view/> -->
-    <Todo />
+    <Header>
+      <template v-slot:header="{head}">
+        <h1>{{head}}</h1>
+      </template>
+    </Header>
+    <router-view/>
+    <Footer>
+      <template v-slot:footer="{foot}">
+        <h1>{{foot}}</h1>
+      </template>
+    </Footer>
   </div>
 </template>
 
 <script>
-import Todo from './router/Todo'
+import Header from '@/components/header'
+import Footer from '@/components/footer'
 export default {
   data () {
     return {
@@ -14,7 +24,8 @@ export default {
     }
   },
   components: {
-    Todo
+    Header,
+    Footer
   }
 }
 </script>
