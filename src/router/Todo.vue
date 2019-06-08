@@ -20,7 +20,7 @@ export default {
   methods: {
     add () {
       var obj = { name: this.inputVal}
-      this.$axios.post('http://localhost:3000/todos',obj)
+      this.$http.post('/todos',obj)
         .then(res => {
           alert('新增成功')
         })
@@ -29,16 +29,16 @@ export default {
         })
     },
     del () {
-      this.$axios.delete("http://localhost:3000/todos/"+arguments[0][1])
+      this.$http.delete("/todos/"+arguments[0][1])
     }
   },
   components: {
     TodoItem
   },
   created () {
-    this.$axios('http://localhost:3000/todos')
+    this.$http('/todos')
       .then(res => {
-        this.ones = res.data
+        this.ones = res
         this.$nextTick(() => {
           console.log('数据获取成功')
           console.log(res)
