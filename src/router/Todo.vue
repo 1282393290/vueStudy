@@ -9,7 +9,7 @@
 
 <script>
 import TodoItem from './TodoItem'
-import Axios from 'axios'
+
 export default {
   data () {
     return {
@@ -19,19 +19,26 @@ export default {
   },
   methods: {
     add () {
-      this.ones.push({ name: this.inputVal, id: this.ones.length })
+      var obj = { name: this.inputVal}
+      this.$axios.post('http://localhost:3000/todos',obj)
+        .then(res => {
+          alert('新增成功')
+        })
+        .catch(err => {
+          alert(err.message)
+        })
     },
     del () {
-      this.ones.splice(arguments[0], 1)
+      this.$axios.delete("http://localhost:3000/todos/"+arguments[0][1])
     }
   },
   components: {
     TodoItem
   },
   created () {
-    Axios('mockdata/info.json')
+    this.$axios('http://localhost:3000/todos')
       .then(res => {
-        this.ones = res.data.data
+        this.ones = res.data
         this.$nextTick(() => {
           console.log('数据获取成功')
           console.log(res)

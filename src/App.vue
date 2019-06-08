@@ -1,15 +1,20 @@
 <template>
   <div id="app">
-    <router-view/>
+    <!-- <router-view/> -->
+    <Todo />
   </div>
 </template>
 
 <script>
+import Todo from './router/Todo'
 export default {
   data () {
     return {
       msg: ''
     }
+  },
+  components: {
+    Todo
   }
 }
 </script>
