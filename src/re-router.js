@@ -6,23 +6,23 @@ import Detail from '@/components/detail'
 
 Vue.use(Router)
 
-const routes = [
-  {
-    path: '/one',
-    name: 'one',
-    component: One
-  },
-  {
-    path: '/two',
-    name: 'two',
-    component: Two
-  },
-  {
-    path: '/detail/:id',
-    name: 'detail',
-    component: Detail
-  }
-]
+// const routes = [
+//   {
+//     path: '/one',
+//     name: 'one',
+//     component: One
+//   },
+//   {
+//     path: '/two',
+//     name: 'two',
+//     component: Two
+//   },
+//   {
+//     path: '/detail/:id',
+//     name: 'detail',
+//     component: Detail
+//   }
+// ]
 
 export default new Router({
   routes
