@@ -5,15 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    name: '刘慧玲-沈萌'
+    name: '沈萌萌-刘慧玲'
   },
   getters: {
-    one (state) {
+    first (state) {
       return state.name.split('-')[0]
     }
   },
   mutations: {
-    cn (state, payload) {
+    born (state,payload) {
       state.name = payload
     }
   }

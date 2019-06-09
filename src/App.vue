@@ -28,9 +28,9 @@ export default {
     return {
       msg: '',
       list: [
-        {name: "沈萌"},
-        {name: "波多野结衣"},
-        {name: "吉泽明步"}
+        { name: '沈萌' },
+        { name: '波多野结衣' },
+        { name: '吉泽明步' }
       ]
     }
   },

@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     nameChn () {
-      this.$store.commit('cn','我稀罕你-慧玲')
+      this.$store.commit('cn', '我稀罕你-慧玲')
     }
   }
 }

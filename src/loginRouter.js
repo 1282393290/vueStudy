@@ -10,12 +10,12 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login
-  },{
+  }, {
     path: '/header',
     name: 'header',
     component: Header,
     props: true
-  },{
+  }, {
     path: '*',
     redirect: '/login'
   }

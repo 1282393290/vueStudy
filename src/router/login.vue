@@ -8,8 +8,8 @@
             name: '刘慧玲',
             id: 2
           }
-        }" 
-        tag="button" 
+        }"
+        tag="button"
        >爱上{{$route.params.name}}</router-link></p>
   </div>
 </template>
@@ -17,11 +17,10 @@
 export default {
   methods: {
     love () {
-      setTimeout(()=>{
+      setTimeout(() => {
         this.$router.push('/header')
-      },2000)
+      }, 2000)
     }
   }
 }
 </script>
-

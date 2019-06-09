@@ -13,8 +13,6 @@ export default {
       msg: '我是头部'
     }
   },
-  props: ['id','name']
+  props: ['id', 'name']
 }
 </script>
-
-

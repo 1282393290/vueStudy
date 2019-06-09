@@ -19,8 +19,8 @@ export default {
   },
   methods: {
     add () {
-      var obj = { name: this.inputVal}
-      this.$http.post('/todos',obj)
+      var obj = { name: this.inputVal }
+      this.$http.post('/todos', obj)
         .then(res => {
           alert('新增成功')
         })
@@ -29,7 +29,7 @@ export default {
         })
     },
     del () {
-      this.$http.delete("/todos/"+arguments[0][1])
+      this.$http.delete('/todos/' + arguments[0][1])
     }
   },
   components: {
