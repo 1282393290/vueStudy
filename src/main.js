@@ -6,14 +6,16 @@ import Vue from 'vue'
 // import Home from './Home.vue'
 // import Home from './vuexStart.vue'
 // import router from '@/vuexStart.js'
-import Home from '@/reviewVuex.vue'
+// import Home from '@/reviewVuex.vue'
 // import router from '@/reviewVuex.js'
+import Home from './myapp'
 import store from '@/store/review'
+import router from './mynewrouter'
 
 Vue.config.productionTip = false
 
 new Vue({
-  // router,
+  router,
   store,
   render: h => h(Home)
 }).$mount('#app')
